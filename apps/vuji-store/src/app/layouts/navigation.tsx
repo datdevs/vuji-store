@@ -31,26 +31,17 @@ export function Navigation() {
 
   return (
     <>
-      <button
-        className="lg:hidden text-black font-medium flex"
-        onClick={toggleMenu}
-        aria-label="Toggle menu"
-      >
+      <button className="flex font-medium text-black lg:hidden" onClick={toggleMenu} aria-label="Toggle menu">
         <span className="material-symbols-rounded">menu</span>
       </button>
-      {isMenuOpen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40"
-          onClick={closeMenu}
-        ></div>
-      )}
+      {isMenuOpen && <div className="fixed inset-0 z-40 bg-black bg-opacity-50" onClick={closeMenu}></div>}
       <nav
-        className={`fixed w-80 top-0 left-0 h-full bg-white shadow-lg transform transition-transform duration-500 ease-in-out z-50 ${
+        className={`fixed left-0 top-0 z-50 h-full w-80 transform bg-white shadow-lg transition-transform duration-500 ease-in-out ${
           isMenuOpen ? 'translate-x-0' : '-translate-x-full'
-        } lg:translate-x-0 lg:flex lg:space-x-6 lg:bg-transparent lg:shadow-none lg:h-auto lg:relative lg:w-auto text-black font-medium`}
+        } font-medium text-black lg:relative lg:flex lg:h-auto lg:w-auto lg:translate-x-0 lg:space-x-6 lg:bg-transparent lg:shadow-none`}
       >
         {menuItems.map(({ href, label }) => (
-          <Link key={href} href={href} className={getMenuItemClass(href, pathname)}>
+          <Link key={href} href={href} className={getMenuItemClass(href, pathname as string)}>
             {label}
           </Link>
         ))}
