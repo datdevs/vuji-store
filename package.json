@@ -5,10 +5,10 @@
   "scripts": {},
   "private": true,
   "dependencies": {
-    "next": "~15.2.4",
+    "next": "~15.5.10",
     "react": "19.0.0",
     "react-dom": "19.0.0",
-    "swiper": "^11.2.6"
+    "swiper": "^12.1.2"
   },
   "devDependencies": {
     "@eslint/compat": "^1.1.1",
@@ -18,7 +18,7 @@
     "@nx/eslint": "20.8.0",
     "@nx/eslint-plugin": "20.8.0",
     "@nx/js": "20.8.0",
-    "@nx/next": "20.8.0",
+    "@nx/next": "22.5.2",
     "@nx/workspace": "20.8.0",
     "@swc-node/register": "~1.9.1",
     "@swc/cli": "~0.6.0",
